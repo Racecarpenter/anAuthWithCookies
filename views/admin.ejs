@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>REGISTERED SEX OFFENDERS</title>
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <h1>PARK COUNTY SHERIFFS DEPARTMENT</h1>
+    <h2>Registered Sex Offenders List</h2>
+    <div class="list">
+    <% for(var i = 0; i < data.length; i++) { %>
+    <ul><li class="name"><%= data[i].firstname %>
+    <%= data[i].lastname %></li>
+      <li>Age:<%= data[i].age %></li>
+      <li>Nickname: "<%= data[i].nickname %>"</li>
+    </ul>
+    <% } %>
+  </div>
+  <h1><a href="/"><button>Back to Home</button></a></h1>
+  <footer><a href="https://github.com/Racecarpenter">Race Carpenter &copy 2017</a></footer>
+  </body>
+</html>
