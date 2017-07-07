@@ -60,6 +60,7 @@ router.get('/', function(req, res, next) {
 router.post('/login', function(req, res) {
   if (req.body.username === username && req.body.password === password) {
     res.cookie('authed', true);
+    res.cookie('booyeah', 'something');
     res.redirect('/admin');
   }
 });
